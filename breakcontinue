@@ -1,0 +1,35 @@
+namespace Breakcontinue
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //2 örnekte for döngüsü içerisinde break ve continue farklarını inceleyeceğiz.
+            //1.Örneğimizde brek, 2.örneğimizde ise continue kullanacağız.
+
+            //1.Örneğimiz
+            for (int sayi = 1; sayi <= 20; sayi++)
+            {
+                if (sayi == 7) /* eğer sayı 7 olduysa*/
+                    break;   /* döngüden çık*/
+                Console.WriteLine("Sayı : {0}", sayi);
+            }
+
+            //1.Örnek sonucunda Konsol çıktısında 7'ye kadar olan sayılar yazıldı ve 7 syaısına geldiğinde 7 yazılmayıp döngü durduurldu
+
+            // 2.Örneğimiz
+            Console.WriteLine("-----------------------");
+            for (int sayi2 = 1; sayi2 <= 20; sayi2++)
+            {
+                if (sayi2 == 9) /* eğer sayı 9 olduysa*/
+                    continue;   /* devam et. 9 u yazma*/
+                Console.WriteLine("Sayı2 : {0}", sayi2);
+            }
+
+            Console.ReadKey();
+
+            //2.Örnek sonucunda Konsol çıktısında 9'a gelince döngü içerisindeki işlem yapılmadı ve 9 yazılmayıp 20'ye kadar olan sayılar yazılmaya devam etti.
+        }
+    }
+}
